@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="vbdev_featured_product" translate="label" sortOrder="900"
+                 showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Featured Product (Home)</label>
+            <tab>catalog</tab>
+            <resource>Vbdev_FeaturedProduct::config</resource>
+            <group id="general" translate="label" sortOrder="10"
+                   showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <backend_model>Vbdev\FeaturedProduct\Model\Config\Backend\InvalidatePageCache</backend_model>
+                </field>
+                <field id="sku" translate="label comment" type="text" sortOrder="20"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product SKU</label>
+                    <comment>Simple, virtual or downloadable product, enabled and visible in the catalog.</comment>
+                    <backend_model>Vbdev\FeaturedProduct\Model\Config\Backend\FeaturedSku</backend_model>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
