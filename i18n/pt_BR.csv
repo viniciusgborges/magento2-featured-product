@@ -1,0 +1,12 @@
+"Product with SKU ""%1"" does not exist.","O produto com SKU ""%1"" não existe."
+"Products of type ""%1"" have no stock of their own. Choose a simple, virtual or downloadable product.","Produtos do tipo ""%1"" não têm estoque próprio. Escolha um produto simples, virtual ou para download."
+"No featured product is configured.","Nenhum produto em destaque está configurado."
+"The featured product is not available in this store.","O produto em destaque não está disponível nesta loja."
+"Featured product","Produto em destaque"
+Featured,Destaque
+"In stock","Em estoque"
+"Out of stock","Fora de estoque"
+"%1 in stock","%1 em estoque"
+"Featured Product (Home)","Produto em Destaque (Home)"
+"Product SKU","SKU do produto"
+"Simple, virtual or downloadable product, enabled and visible in the catalog.","Produto simples, virtual ou para download, habilitado e visível no catálogo."

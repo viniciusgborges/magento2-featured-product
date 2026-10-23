@@ -1,0 +1,12 @@
+"Product with SKU ""%1"" does not exist.","Product with SKU ""%1"" does not exist."
+"Products of type ""%1"" have no stock of their own. Choose a simple, virtual or downloadable product.","Products of type ""%1"" have no stock of their own. Choose a simple, virtual or downloadable product."
+"No featured product is configured.","No featured product is configured."
+"The featured product is not available in this store.","The featured product is not available in this store."
+"Featured product","Featured product"
+Featured,Featured
+"In stock","In stock"
+"Out of stock","Out of stock"
+"%1 in stock","%1 in stock"
+"Featured Product (Home)","Featured Product (Home)"
+"Product SKU","Product SKU"
+"Simple, virtual or downloadable product, enabled and visible in the catalog.","Simple, virtual or downloadable product, enabled and visible in the catalog."
