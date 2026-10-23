@@ -1,0 +1,31 @@
+<?php
+/**
+ * @var \Vbdev\FeaturedProduct\Block\FeaturedProduct $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+$product = $block->getViewModel()->getProduct();
+?>
+<section id="vbdev-featured-product"
+         class="vbdev-featured-product"
+         aria-label="<?= $escaper->escapeHtmlAttr(__('Featured product')) ?>">
+    <a class="vbdev-featured-product-link" href="<?= $escaper->escapeUrl($product->getProductUrl()) ?>">
+        <div class="vbdev-featured-product-media">
+            <?= /* @noEscape */ $block->getImageHtml($product) ?>
+        </div>
+        <div class="vbdev-featured-product-info">
+            <span class="vbdev-featured-product-badge"><?= $escaper->escapeHtml(__('Featured')) ?></span>
+            <h2 class="vbdev-featured-product-name"><?= $escaper->escapeHtml($product->getName()) ?></h2>
+            <?= /* @noEscape */ $block->getPriceHtml($product) ?>
+            <div data-bind="scope: '<?= $escaper->escapeHtmlAttr($block::STOCK_COMPONENT) ?>'">
+                <!-- ko template: getTemplate() --><!-- /ko -->
+            </div>
+        </div>
+    </a>
+</section>
+<script type="text/x-magento-init">
+{
+    "#vbdev-featured-product": {
+        "Magento_Ui/js/core/app": <?= /* @noEscape */ $block->getJsLayout() ?>
+    }
+}
+</script>
