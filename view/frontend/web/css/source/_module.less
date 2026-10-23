@@ -1,0 +1,103 @@
+@vbdev-featured-product__border-radius: 4px;
+@vbdev-featured-product__hover__box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .1);
+
+& when (@media-common = true) {
+    .vbdev-featured-product {
+        margin-bottom: @indent__l;
+
+        .price-box {
+            margin: 0;
+
+            .price {
+                font-size: @font-size__xl;
+                font-weight: @font-weight__bold;
+            }
+        }
+    }
+
+    .vbdev-featured-product-link {
+        background: @color-white;
+        border: 1px solid @border-color__base;
+        border-radius: @vbdev-featured-product__border-radius;
+        display: flex;
+        flex-direction: column;
+        gap: @indent__base;
+        padding: @indent__base;
+        transition: border-color .2s, box-shadow .2s;
+
+        &,
+        &:visited,
+        &:hover {
+            color: @text__color;
+            text-decoration: none;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: @link__color;
+            box-shadow: @vbdev-featured-product__hover__box-shadow;
+        }
+    }
+
+    .vbdev-featured-product-media {
+        align-self: center;
+        flex-shrink: 0;
+        max-width: 280px;
+        width: 100%;
+
+        .product-image-container {
+            max-width: 100%;
+        }
+    }
+
+    .vbdev-featured-product-info {
+        display: flex;
+        flex-direction: column;
+        gap: @indent__s;
+    }
+
+    .vbdev-featured-product-badge {
+        align-self: flex-start;
+        background: @link__color;
+        border-radius: @vbdev-featured-product__border-radius;
+        color: @color-white;
+        font-size: @font-size__s;
+        font-weight: @font-weight__semibold;
+        padding: 2px @indent__s;
+        text-transform: uppercase;
+    }
+
+    .vbdev-featured-product-name {
+        color: @link__color;
+        margin: 0;
+    }
+
+    .vbdev-featured-product-stock {
+        color: @color-dark-green1;
+        font-weight: @font-weight__semibold;
+        margin: 0;
+
+        &:before {
+            background: currentColor;
+            border-radius: 50%;
+            content: '';
+            display: inline-block;
+            height: 8px;
+            margin-right: @indent__xs;
+            width: 8px;
+        }
+
+        &.unavailable {
+            color: @error__color;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .vbdev-featured-product-link {
+        align-items: center;
+        flex-direction: row;
+        gap: @indent__l;
+        padding: @indent__l;
+    }
+}
